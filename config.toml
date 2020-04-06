@@ -30,14 +30,3 @@ name = "<i class='fab fa-fw fa-twitter'></i> @RobertBohne"
 identifier = "twitter"
 url = "https://twitter.com/robertbohne"
 weight = 11
-
- [params.favicon]
-  # you may want to use https://realfavicongenerator.net to generate you files
-  # used in layouts/partials/head.favicon.html
-  # relURL is applied to path 
-  enable    = true
-  path      = "/images/favicons"
-  version   = "a_random_value"
-  maskIicon = "#5bbad5" 
-  tileColor = "#da532c" 
-  themeColor= "#ffffff" 
