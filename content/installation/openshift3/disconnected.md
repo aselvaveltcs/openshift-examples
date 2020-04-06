@@ -1,8 +1,11 @@
-# Disconnected
+---
+title: Disconnected / air-gapped
+tags: ['OpenShift3']
 
+--- 
 ## Disconnected installation notes
 
-[https://docs.openshift.com/container-platform/3.11/install/disconnected\_install.html\[Documentation](https://docs.openshift.com/container-platform/3.11/install/disconnected_install.html[Documentation)\]
+[Documentation](https://docs.openshift.com/container-platform/3.11/install/disconnected_install.html[Documentation)
 
 ### Prepare OpenStack Env.
 

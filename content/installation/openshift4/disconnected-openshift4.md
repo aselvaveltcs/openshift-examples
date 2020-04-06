@@ -1,15 +1,12 @@
-# Disconnected / air-gapped OpenShift installation
-
+---
+title: Disconnected / air-gapped
+--- 
 ## Ressources
 
 * [Creating a mirror registry for installation in a restricted network](https://docs.openshift.com/container-platform/4.2/installing/installing_restricted_networks/installing-restricted-networks-preparations.html)
-* \[Installing a cluster on bare metal in a restricted network
+* [Installing a cluster on bare metal in a restricted network](https://docs.openshift.com/container-platform/4.2/installing/installing_restricted_networks/installing-restricted-networks-bare-metal.html)\)
 
-  \]\([https://docs.openshift.com/container-platform/4.2/installing/installing\_restricted\_networks/installing-restricted-networks-bare-metal.html](https://docs.openshift.com/container-platform/4.2/installing/installing_restricted_networks/installing-restricted-networks-bare-metal.html)\)
-
-* \[RH-INTERN: Disconnected “Air-gapped” Install Procedure
-
-  \]\([https://docs.google.com/document/d/10Wu-HRiQEZSdzroXeJKXyjcjcgBHUk3JRBNIpHlEd1A/edit\#](https://docs.google.com/document/d/10Wu-HRiQEZSdzroXeJKXyjcjcgBHUk3JRBNIpHlEd1A/edit#)\)
+* [RH-INTERN: Disconnected "Air-gapped" Install Procedure](https://docs.google.com/document/d/10Wu-HRiQEZSdzroXeJKXyjcjcgBHUk3JRBNIpHlEd1A/edit#)\)
 
 * [https://github.com/openshift-telco/openshift4x-poc/blob/master/utils/Registry/local-registry.md](https://github.com/openshift-telco/openshift4x-poc/blob/master/utils/Registry/local-registry.md) 
 * [https://github.com/ashcrow/filetranspiler](https://github.com/ashcrow/filetranspiler)
