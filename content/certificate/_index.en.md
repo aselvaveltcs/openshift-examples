@@ -1,4 +1,7 @@
-# Certificates
+---
+title: Certificates
+---
+
 
 ## General: Create a self signed certificate
 
@@ -73,36 +76,63 @@ openssl x509 -in cert.pem -noout -text
 {% tabs %}
 {% tab title="openssl.root-ca.conf" %}
 ```text
-# OpenSSL root CA configuration file.
+---
+title: OpenSSL root CA configuration file.
+---
+
 
 [ req ]
-# Options for the `req` tool (`man req`).
+---
+title: Options for the `req` tool (`man req`).
+---
+
 default_bits        = 2048
 distinguished_name  = req_distinguished_name
 string_mask         = utf8only
 
-# SHA-1 is deprecated, so use SHA-2 instead.
+---
+title: SHA-1 is deprecated, so use SHA-2 instead.
+---
+
 default_md          = sha256
 
-# Extension to add when the -x509 option is used.
+---
+title: Extension to add when the -x509 option is used.
+---
+
 x509_extensions     = v3_ca
 req_extensions      = v3_req
 
 [ v3_req ]
-# Extensions to add to a certificate request
+---
+title: Extensions to add to a certificate request
+---
+
 basicConstraints = CA:FALSE
 keyUsage = nonRepudiation, digitalSignature, keyEncipherment
 subjectAltName = @alt_names
 
 [alt_names]
 DNS.1 = rootca.example.com
-# DNS.2 = *.pass.example.com
-# DNS.3 = ...
-# DNS.4 = ...
+---
+title: DNS.2 = *.pass.example.com
+---
+
+---
+title: DNS.3 = ...
+---
+
+---
+title: DNS.4 = ...
+---
+
 
 
 [ req_distinguished_name ]
-# See <https://en.wikipedia.org/wiki/Certificate_signing_request>.
+---
+title: See <https://en.wikipedia.org/wiki/Certificate_signing_request>.
+---
+
 countryName                     = Country Name (2 letter code)
 stateOrProvinceName             = State or Province Name
 localityName                    = Locality Name
@@ -111,7 +141,10 @@ organizationalUnitName          = Organizational Unit Name
 commonName                      = Common Name
 emailAddress                    = Email Address
 
-# Optionally, specify some defaults.
+---
+title: Optionally, specify some defaults.
+---
+
 countryName_default             = DE
 stateOrProvinceName_default     = Bavaria
 localityName_default            = Munich
@@ -121,21 +154,30 @@ emailAddress_default            = email@domain.tld
 commonName_default              = rootca.example.com
 
 [ v3_ca ]
-# Extensions for a typical CA (`man x509v3_config`).
+---
+title: Extensions for a typical CA (`man x509v3_config`).
+---
+
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid:always,issuer
 basicConstraints = critical, CA:true
 keyUsage = critical, digitalSignature, cRLSign, keyCertSign
 
 [ v3_intermediate_ca ]
-# Extensions for a typical intermediate CA (`man x509v3_config`).
+---
+title: Extensions for a typical intermediate CA (`man x509v3_config`).
+---
+
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid:always,issuer
 basicConstraints = critical, CA:true, pathlen:0
 keyUsage = critical, digitalSignature, cRLSign, keyCertSign
 
 [ server_cert ]
-# Extensions for server certificates (`man x509v3_config`).
+---
+title: Extensions for server certificates (`man x509v3_config`).
+---
+
 basicConstraints = CA:FALSE
 nsCertType = server
 nsComment = "OpenSSL Generated Server Certificate"
@@ -145,7 +187,10 @@ keyUsage = critical, digitalSignature, keyEncipherment
 extendedKeyUsage = serverAuth
 
 [ crl_ext ]
-# Extension for CRLs (`man x509v3_config`).
+---
+title: Extension for CRLs (`man x509v3_config`).
+---
+
 authorityKeyIdentifier=keyid:always
 ```
 {% endtab %}
@@ -294,7 +339,7 @@ openssl x509 -sha256 -req -in yoursite.org.csr \
 
 ### Trust own root CA on your Linux box
 
-{% embed url="https://access.redhat.com/solutions/1519813" %}
+(https://access.redhat.com/solutions/1519813)
 
 ```bash
 update-ca-trust enable

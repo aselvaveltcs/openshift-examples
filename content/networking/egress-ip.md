@@ -1,4 +1,7 @@
-# Egress IP testing
+---
+title: Egress IP testing
+---
+
 
 Namespace egress IP is a good way to fine tune access to services external to OpenShift, like databases. By default containers running on OpenShift will get IP from underlying node when they connect external services. This means that you without feature like egress IP you have to open firewall to external services from all OpenShift cluster nodes....this is not a good and security solution for production use.
 

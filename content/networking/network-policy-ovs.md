@@ -1,4 +1,7 @@
-# Network Policy with OVS - DRAFT
+---
+title: Network Policy with OVS - DRAFT
+---
+
 
 ## ToDo
 
@@ -27,7 +30,7 @@ Install openshift
 OpenShift 3 with redhat/openshift-ovs-networkpolicy  
 OpenShift 4 network policy is the default
 
-![demo overview](../.gitbook/assets/demo-overview.png)
+![demo overview](..//assets/demo-overview.png)
 
 ```text
 oc new-project bouvier
@@ -71,7 +74,7 @@ cd openshift-examples/networking/network-policy-ovs/
 ./run-tmux <domain>
 ```
 
-![demo overview](../.gitbook/assets/without-policies.png)
+![demo overview](..//assets/without-policies.png)
 
 Connection's to yourself \(eg. homer.simpson -&gt; homer.simpson\) is flapping if you have more than one pod. Because of:  [https://gist.github.com/rbo/4aa7840ebabf11aad3bf7961619e18e3](https://gist.github.com/rbo/4aa7840ebabf11aad3bf7961619e18e3)
 
@@ -111,7 +114,7 @@ selma-1-h4hh2   1/1       Running   0          2h        10.30.2.89   node0     
 
 Every one can connect to each other
 
-![Clean](../.gitbook/assets/without-policies%20%281%29.png)
+![Clean](..//assets/without-policies%20%281%29.png)
 
 ```bash
 ./dump-net.sh --all case0
@@ -133,10 +136,10 @@ EOF
 {% hint style="danger" %}
 Screenshot - Passt nicht zu OpenShift 4
 
-![Case 1](../.gitbook/assets/case1.png)
+![Case 1](..//assets/case1.png)
 {% endhint %}
 
-![Case 1](../.gitbook/assets/case1.png)
+![Case 1](..//assets/case1.png)
 
 ```text
 $ ./dump-net.sh compute-0 compute-0.case1
@@ -184,7 +187,7 @@ $ $ diff -Nuar node1.case1.OpenFlow13 node1.case2.OpenFlow13
   table=80, priority=50,reg1=10389750 actions=output:NXM_NX_REG2[]
 ```
 
-![Case 2](../.gitbook/assets/case2.png)
+![Case 2](..//assets/case2.png)
 
 #### 3\) Simpson allow internal communcation
 
@@ -214,7 +217,7 @@ $ diff -Nuar node1.case2.OpenFlow13 node1.case3.OpenFlow13
   table=80, priority=50,reg1=10389750 actions=output:NXM_NX_REG2[]
 ```
 
-![Case 3](../.gitbook/assets/case3.png)
+![Case 3](..//assets/case3.png)
 
 #### 4\) Selma and Patty want's to talk with Marge!
 
@@ -250,7 +253,7 @@ $ diff -Nuar node1.case3.OpenFlow13 node1.case4.OpenFlow13
   table=80, priority=50,reg1=10389750 actions=output:NXM_NX_REG2[]
 ```
 
-![Case 4](../.gitbook/assets/case4.png)
+![Case 4](..//assets/case4.png)
 
 ### Bonus, one EgressNetworkPolicy
 

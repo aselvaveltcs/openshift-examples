@@ -1,22 +1,19 @@
 ---
+title: OpenShift Examples
 description: "This is my (Robert Bohne) personal OpenShift Examples and Notice collection. ( Including a lot of typos \U0001F609)"
 ---
 
-# OpenShift Examples
-
-
-
-![](.gitbook/assets/d6161780-e9e7-11e9-9865-0678be38bf7f.png)
+![](/assets/d6161780-e9e7-11e9-9865-0678be38bf7f.png)
 
 ## Run OpenShift on your Hetzner Server
 
-{% embed url="https://github.com/RedHat-EMEA-SSA-Team/hetzner-ocp4" %}
+(https://github.com/RedHat-EMEA-SSA-Team/hetzner-ocp4)
 
 ## Run OCP on your laptop
 
 ### OpenShift 3
 
-{% embed url="https://github.com/code-ready/crc" %}
+(https://github.com/code-ready/crc)
 
 ### OpenShift 4
 
@@ -25,7 +22,7 @@ oc cluster up --image=registry.access.redhat.com/openshift3/ose \
   --public-hostname=localhost
 ```
 
-{% embed url="https://developers.redhat.com/products/cdk/overview" %}
+(https://developers.redhat.com/products/cdk/overview)
 
 ## Usefull commands
 
@@ -49,7 +46,10 @@ oc get pvc --all-namespaces -o json | jq -r  ' .items[] |  [.metadata.namespace,
 
 ```text
 oc get secret -n openshift-web-console webconsole-serving-cert -o json | jq -r '.data."tls.crt"' | base64 -d > foo.pem
-# Can't use openssl x509, x509 do not support bundles
+---
+title: Can't use openssl x509, x509 do not support bundles
+---
+
 openssl crl2pkcs7 -nocrl -certfile foo.pem | openssl pkcs7 -print_certs  -noout
 ```
 
