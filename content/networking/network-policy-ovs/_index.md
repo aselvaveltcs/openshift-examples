@@ -30,7 +30,7 @@ Install openshift
 OpenShift 3 with redhat/openshift-ovs-networkpolicy  
 OpenShift 4 network policy is the default
 
-![demo overview](..//assets/demo-overview.png)
+![demo overview](demo-overview.png)
 
 ```text
 oc new-project bouvier
@@ -52,21 +52,21 @@ oc expose svc/marge
 
 ### Download some helper scripts
 
-{% tabs %}
-{% tab title="Download" %}
+
+`Download`
 ```text
 curl -L -O https://raw.githubusercontent.com/rbo/openshift-examples/master/networking/network-policy-ovs/run-tmux
 curl -L -O https://raw.githubusercontent.com/rbo/openshift-examples/master/networking/network-policy-ovs/dump-net.sh
 ```
-{% endtab %}
 
-{% tab title="Git clone" %}
+
+`Git clone`
 ```
 git clone https://github.com/rbo/openshift-examples.git
 cd openshift-examples/networking/network-policy-ovs/
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 ### Run connection overview
 
@@ -74,7 +74,7 @@ cd openshift-examples/networking/network-policy-ovs/
 ./run-tmux <domain>
 ```
 
-![demo overview](..//assets/without-policies.png)
+![demo overview](without-policies.png)
 
 Connection's to yourself \(eg. homer.simpson -&gt; homer.simpson\) is flapping if you have more than one pod. Because of:  [https://gist.github.com/rbo/4aa7840ebabf11aad3bf7961619e18e3](https://gist.github.com/rbo/4aa7840ebabf11aad3bf7961619e18e3)
 
@@ -114,7 +114,7 @@ selma-1-h4hh2   1/1       Running   0          2h        10.30.2.89   node0     
 
 Every one can connect to each other
 
-![Clean](..//assets/without-policies%20%281%29.png)
+![Clean](without-policies-1.png)
 
 ```bash
 ./dump-net.sh --all case0
@@ -133,13 +133,13 @@ spec:
 EOF
 ```
 
-{% hint style="danger" %}
+{{% notice warning %}}
 Screenshot - Passt nicht zu OpenShift 4
 
-![Case 1](..//assets/case1.png)
-{% endhint %}
+![Case 1](case1.png)
+{{% /notice %}}
 
-![Case 1](..//assets/case1.png)
+![Case 1](case1.png)
 
 ```text
 $ ./dump-net.sh compute-0 compute-0.case1
@@ -187,7 +187,7 @@ $ $ diff -Nuar node1.case1.OpenFlow13 node1.case2.OpenFlow13
   table=80, priority=50,reg1=10389750 actions=output:NXM_NX_REG2[]
 ```
 
-![Case 2](..//assets/case2.png)
+![Case 2](case2.png)
 
 #### 3\) Simpson allow internal communcation
 
@@ -217,7 +217,7 @@ $ diff -Nuar node1.case2.OpenFlow13 node1.case3.OpenFlow13
   table=80, priority=50,reg1=10389750 actions=output:NXM_NX_REG2[]
 ```
 
-![Case 3](..//assets/case3.png)
+![Case 3](case3.png)
 
 #### 4\) Selma and Patty want's to talk with Marge!
 
@@ -253,13 +253,13 @@ $ diff -Nuar node1.case3.OpenFlow13 node1.case4.OpenFlow13
   table=80, priority=50,reg1=10389750 actions=output:NXM_NX_REG2[]
 ```
 
-![Case 4](..//assets/case4.png)
+![Case 4](case4.png)
 
 ### Bonus, one EgressNetworkPolicy
 
-{% hint style="warning" %}
+{{% notice info %}}
 Not supported in OpenShift 4.2
-{% endhint %}
+{{% /notice %}}
 
 ```text
 $ ./dump-net.sh ip-10-0-137-107.us-east-2.compute.internal bevore-egress

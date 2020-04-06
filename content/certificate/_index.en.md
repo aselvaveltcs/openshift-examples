@@ -2,12 +2,11 @@
 title: Certificates
 ---
 
-
 ## General: Create a self signed certificate
 
 #### 1\) Adjust `openssl.self-signed-certificate.conf` 
 
-{% code title="openssl.self-signed-certificate.conf" %}
+`openssl.self-signed-certificate.conf`
 ```text
 [req]
 distinguished_name = req_distinguished_name
@@ -32,7 +31,7 @@ DNS.1 = nginx-ex-ssl-stc-pipeline.6923.rh-us-east-1.openshiftapps.com
 DNS.2 = company.com
 DNS.3 = company.net
 ```
-{% endcode %}
+
 
 #### 2\) Create self signed certificate
 
@@ -73,8 +72,8 @@ openssl x509 -in cert.pem -noout -text
 
 ### Create OpenSSL Configuration 
 
-{% tabs %}
-{% tab title="openssl.root-ca.conf" %}
+
+`openssl.root-ca.conf`
 ```text
 ---
 title: OpenSSL root CA configuration file.
@@ -193,9 +192,9 @@ title: Extension for CRLs (`man x509v3_config`).
 
 authorityKeyIdentifier=keyid:always
 ```
-{% endtab %}
 
-{% tab title="openssl.certificate.conf" %}
+
+`openssl.certificate.conf`
     # OpenSSL root CA configuration file.
 
     [ req ]
@@ -270,15 +269,15 @@ authorityKeyIdentifier=keyid:always
     [ crl_ext ]
     # Extension for CRLs (`man x509v3_config`).
     authorityKeyIdentifier=keyid:always
-{% endtab %}
 
-{% tab title="Download it" %}
+
+`Download it`
 ```
 curl -L -O https://raw.githubusercontent.com/rbo/openshift-examples/master/certificate/openssl.root-ca.conf
 curl -L -O https://raw.githubusercontent.com/rbo/openshift-examples/master/certificate/openssl.certificate.conf
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 ### Adjust openssl.certificate.conf
 
