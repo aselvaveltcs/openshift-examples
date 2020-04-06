@@ -1,0 +1,43 @@
+languageCode = "en-us"
+title = "OpenShift Examples"
+
+theme = "hugo-theme-learn"
+
+[params]
+  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  themeVariant = "gray"
+  editURL = "https://github.com/rbo/openshift-examples/edit/content/"
+  disableNextPrev = true
+
+# For search functionality
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-tags'></i> Tags"
+url = "/tags"
+weight = 30
+
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> rbo/openshift-examples"
+identifier = "github"
+url = "https://github.com/rbo/openshift-examples"
+weight = 10
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-twitter'></i> @RobertBohne"
+identifier = "twitter"
+url = "https://twitter.com/robertbohne"
+weight = 11
+
+ [params.favicon]
+  # you may want to use https://realfavicongenerator.net to generate you files
+  # used in layouts/partials/head.favicon.html
+  # relURL is applied to path 
+  enable    = true
+  path      = "/images/favicons"
+  version   = "a_random_value"
+  maskIicon = "#5bbad5" 
+  tileColor = "#da532c" 
+  themeColor= "#ffffff" 

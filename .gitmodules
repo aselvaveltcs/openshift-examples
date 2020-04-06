@@ -1,3 +1,6 @@
 [submodule "build/s2i-R-shiny/builder/shiny-examples"]
 	path = build/s2i-R-shiny/builder/shiny-examples
 	url = https://github.com/rstudio/shiny-examples
+[submodule "themes/hugo-theme-learn"]
+	path = themes/hugo-theme-learn
+	url = https://github.com/matcornic/hugo-theme-learn.git
