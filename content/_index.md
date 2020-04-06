@@ -5,9 +5,13 @@ description: "This is my (Robert Bohne) personal OpenShift Examples and Notice c
 
 ![](/assets/d6161780-e9e7-11e9-9865-0678be38bf7f.png)
 
+## Useful links
+
+- [Building, running, and managing Linux containers on Red Hat Enterprise Linux 8](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index)
+
 ## Run OpenShift on your Hetzner Server
 
-(https://github.com/RedHat-EMEA-SSA-Team/hetzner-ocp4)
+https://github.com/RedHat-EMEA-SSA-Team/hetzner-ocp4
 
 ## Run OCP on your laptop
 
