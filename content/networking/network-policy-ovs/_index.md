@@ -2,7 +2,6 @@
 title: Network Policy with OVS - DRAFT
 ---
 
-
 ## ToDo
 
 * [x] Provide helper scripts
@@ -137,9 +136,8 @@ EOF
 Screenshot - Passt nicht zu OpenShift 4
 
 ![Case 1](case1.png)
-{{% /notice %}}
 
-![Case 1](case1.png)
+{{% /notice %}}
 
 ```text
 $ ./dump-net.sh compute-0 compute-0.case1
